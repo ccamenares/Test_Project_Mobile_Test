@@ -10,6 +10,10 @@ public class MyFirstMobileTest_Runner {
 	// Setting the development token
 	private final static String devToken = "YOUR_DEV_TOKEN_GOES_HERE";
 
+	public static void main(String[] args) throws Exception {
+		runAddPersonCodeBlock();
+	}
+	
 	// Runs the test
 	private static void runAddPersonCodeBlock() {
 		DriverSettings driverSettings = getDriverSettings();
