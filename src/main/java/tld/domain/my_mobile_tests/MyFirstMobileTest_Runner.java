@@ -10,10 +10,27 @@ public class MyFirstMobileTest_Runner {
 	// Setting the development token
 	private final static String devToken = "YOUR_DEV_TOKEN_GOES_HERE";
 
+	// Runs the test
+	private static void runAddPersonCodeBlock() {
+		DriverSettings driverSettings = getDriverSettings();
+
+		try (TestProjectRunner runner =
+			new TestProjectRunner(devToken, driverSettings, true)){
+			// Creating an instance of the test
+			MyFirstMobileTest myFirstMobileTest = new MyFirstMobileTest();
+		
+			// Running the test
+			runner.run(myFirstMobileTest);
+		} catch (Throwable e) {
+		// Handle failure...
+		}
+	}
+
+	
 	// Initializes driver settings
 	private static DriverSettings getDriverSettings() {
 		DriverSettings driverSettings = new DriverSettings();
-
+		
 		// Declare that Android driver is required
 		driverSettings.setDriverType(DriverType.Appium_Android);
 
