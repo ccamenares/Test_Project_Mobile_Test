@@ -17,10 +17,12 @@ public class MyFirstMobileTest extends Test {
 		AndroidDriver<MobileElement> driver = this.getAndroidDriver(MobileElement.class);
 		
 		// Find First name element and type 'John'
-		MobileElement firstName = driver.findElement(By.id("firstName")); firstName.sendKeys("John");
+		MobileElement firstName = driver.findElement(By.id("firstName")); 
+		firstName.sendKeys("John");
 		
 		// Find Last name element and type 'Smith'
-		MobileElement lastName = driver.findElement(By.id("lastName")); lastName.sendKeys("Smith");
+		MobileElement lastName = driver.findElement(By.id("lastName")); 
+		lastName.sendKeys("Smith");
 		
 		// Find Full Name element
 		MobileElement fullName = driver.findElement(By.id("fullName"));
